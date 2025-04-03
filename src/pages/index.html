@@ -31,12 +31,12 @@
   </head>
   <body class="bg-darker text-light min-h-screen">
     <!-- Initial Loader -->
-    <div class="loader-container" id="loader">
+    <!-- <div class="loader-container" id="loader">
       <div class="loader">
         <div class="loader-circle"></div>
         <div class="loader-logo">CD</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Mobile Menu -->
     <div class="mobile-menu-container md:hidden" id="mobile-menu">
@@ -119,7 +119,7 @@
           </div>
           <div class="flex items-center">
             <button
-              class="bg-primary hover:bg-opacity-90 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 hidden md:block"
+              class="btn-gradient text-white px-4 py-2 rounded-md text-sm font-medium hidden md:block"
             >
               Select Wallet
             </button>
@@ -163,15 +163,17 @@
             </p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4">
               <button
-                class="btn-gradient text-white px-8 py-3 rounded-md font-medium text-lg shadow-lg pulse-animation"
+                class="btn-gradient text-white px-8 py-2 rounded-md font-medium text-lg shadow-lg pulse-animation"
               >
                 Launch Token
               </button>
-              <button
-                class="bg-transparent border border-primary text-primary hover:bg-primary hover:bg-opacity-10 px-8 py-3 rounded-md font-medium text-lg transition-all duration-300 hover:scale-105"
-              >
-                Learn More
-              </button>
+              <div class="overflow-hidden rounded-lg p-[2px] hover:shadow-[0_0_10px_5px_rgba(108,43,217,0.4)]">
+                <button
+                  class="snake-button border border-primary text-primary px-8 py-3 rounded-md font-medium text-lg transition-all duration-300 bg-[#151A31] hover:border-transparent"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -561,195 +563,220 @@
         <div class="space-y-6">
           <!-- FAQ Item 1 -->
           <div
-            class="card-gradient border border-gray-800 rounded-xl overflow-hidden hover-card"
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-offset="0"
-            data-aos-delay="50"
+            class="relative p-0.5 rounded-xl overflow-hidden border border-gray-800 hover-card"
           >
-            <button
-              class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
+            <div class="animated-border"></div>
+            <div
+              class="rounded-xl overflow-hidden card-gradient z-10 relative"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-offset="0"
+              data-aos-delay="50"
             >
-              <span class="text-lg font-medium text-white"
-                >What is a crypto token?</span
+              <button
+                class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
               >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-primary transition-transform duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <div class="px-6 pb-4 faq-content hidden">
-              <p class="text-gray-400">
-                A crypto token is a digital asset that represents a specific
-                utility or value within a blockchain ecosystem. Unlike
-                cryptocurrencies, tokens are built on existing blockchains and
-                can serve various purposes such as governance, utility, or
-                representing real-world assets.
-              </p>
+                <span class="text-lg font-medium text-white">
+                  What is a crypto token?
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-primary transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <p class="text-gray-400">
+                  A crypto token is a digital asset that represents a specific
+                  utility or value within a blockchain ecosystem. Unlike
+                  cryptocurrencies, tokens are built on existing blockchains and
+                  can serve various purposes such as governance, utility, or
+                  representing real-world assets.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- FAQ Item 2 -->
           <div
-            class="card-gradient border border-gray-800 rounded-xl overflow-hidden hover-card"
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-offset="0"
-            data-aos-delay="100"
+            class="relative p-0.5 rounded-xl overflow-hidden border border-gray-800 hover-card"
           >
-            <button
-              class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
+            <div class="animated-border"></div>
+            <div
+              class="rounded-xl overflow-hidden card-gradient z-10 relative"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-offset="0"
+              data-aos-delay="100"
             >
-              <span class="text-lg font-medium text-white"
-                >Is it safe to create tokens on this platform?</span
+              <button
+                class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
               >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-primary transition-transform duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <div class="px-6 pb-4 faq-content hidden">
-              <p class="text-gray-400">
-                Yes, our platform uses secure, audited smart contracts to create
-                tokens. All transactions are executed directly on the
-                blockchain, ensuring transparency and security. We never have
-                access to your private keys or funds.
-              </p>
+                <span class="text-lg font-medium text-white">
+                  Is it safe to create tokens on this platform?
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-primary transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <p class="text-gray-400">
+                  Yes, our platform uses secure, audited smart contracts to
+                  create tokens. All transactions are executed directly on the
+                  blockchain, ensuring transparency and security. We never have
+                  access to your private keys or funds.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- FAQ Item 3 -->
           <div
-            class="card-gradient border border-gray-800 rounded-xl overflow-hidden hover-card"
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-offset="0"
-            data-aos-delay="150"
+            class="relative p-0.5 rounded-xl overflow-hidden border border-gray-800 hover-card"
           >
-            <button
-              class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
+            <div class="animated-border"></div>
+            <div
+              class="rounded-xl overflow-hidden card-gradient z-10 relative"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-offset="0"
+              data-aos-delay="150"
             >
-              <span class="text-lg font-medium text-white"
-                >How much does it cost to create a token?</span
+              <button
+                class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
               >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-primary transition-transform duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <div class="px-6 pb-4 faq-content hidden">
-              <p class="text-gray-400">
-                The cost of creating a token is 0.3 SOL, which covers all
-                blockchain fees and platform usage. There are no hidden fees or
-                subscription costs.
-              </p>
+                <span class="text-lg font-medium text-white">
+                  How much does it cost to create a token?
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-primary transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <p class="text-gray-400">
+                  The cost of creating a token is 0.3 SOL, which covers all
+                  blockchain fees and platform usage. There are no hidden fees
+                  or subscription costs.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- FAQ Item 4 -->
           <div
-            class="card-gradient border border-gray-800 rounded-xl overflow-hidden hover-card"
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-offset="0"
-            data-aos-delay="200"
+            class="relative p-0.5 rounded-xl overflow-hidden border border-gray-800 hover-card"
           >
-            <button
-              class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
+            <div class="animated-border"></div>
+            <div
+              class="rounded-xl overflow-hidden card-gradient z-10 relative"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-offset="0"
+              data-aos-delay="200"
             >
-              <span class="text-lg font-medium text-white"
-                >What wallets are supported?</span
+              <button
+                class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
               >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-primary transition-transform duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <div class="px-6 pb-4 faq-content hidden">
-              <p class="text-gray-400">
-                We support most popular wallets including Phantom, Solflare,
-                Slope, and other Solana-compatible wallets. Simply connect your
-                preferred wallet to get started.
-              </p>
+                <span class="text-lg font-medium text-white">
+                  What wallets are supported?
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-primary transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <p class="text-gray-400">
+                  We support most popular wallets including Phantom, Solflare,
+                  Slope, and other Solana-compatible wallets. Simply connect
+                  your preferred wallet to get started.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- FAQ Item 5 -->
           <div
-            class="card-gradient border border-gray-800 rounded-xl overflow-hidden hover-card"
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-offset="0"
-            data-aos-delay="250"
+            class="relative p-0.5 rounded-xl overflow-hidden border border-gray-800 hover-card"
           >
-            <button
-              class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
+            <div class="animated-border"></div>
+            <div
+              class="rounded-xl overflow-hidden card-gradient z-10 relative"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-offset="0"
+              data-aos-delay="250"
             >
-              <span class="text-lg font-medium text-white"
-                >How long does token creation take?</span
+              <button
+                class="flex justify-between items-center w-full px-6 py-4 text-left faq-toggle"
               >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-primary transition-transform duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <div class="px-6 pb-4 faq-content hidden">
-              <p class="text-gray-400">
-                Token creation typically takes less than a minute. Once you
-                submit the creation request and confirm the transaction in your
-                wallet, your token will be created and available in your wallet
-                almost instantly.
-              </p>
+                <span class="text-lg font-medium text-white">
+                  How long does token creation take?
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-primary transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <p class="text-gray-400">
+                  Token creation typically takes less than a minute. Once you
+                  submit the creation request and confirm the transaction in
+                  your wallet, your token will be created and available in your
+                  wallet almost instantly.
+                </p>
+              </div>
             </div>
           </div>
         </div>

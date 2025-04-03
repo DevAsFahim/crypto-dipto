@@ -39,20 +39,21 @@ input[type="number"] {
 }
 
 .btn-gradient {
-  background: linear-gradient(90deg, #6c2bd9 0%, #4f46e5 100%);
+  background: linear-gradient(90deg, #6c2bd9, #171099, #6c2bd9);
+  background-size: 200%;
   transition: all 0.3s ease;
 }
 
 .btn-gradient:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 20px -10px rgba(108, 43, 217, 0.6);
+  background-position: right;
 }
 
 .card-gradient {
   background: linear-gradient(
     130deg,
-    rgba(30, 58, 138, 0.3) 0%,
-    rgba(15, 23, 42, 0.1) 100%
+    rgb(4, 16, 48) 0%,
+    rgba(15, 23, 42, 1) 100%
   );
 }
 
@@ -166,8 +167,38 @@ input[type="number"] {
 }
 
 .hover-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+}
+.hover-card .animated-border {
+  position:absolute;
+  height: 50%;
+  width: 120%;
+  background: linear-gradient(
+    90deg,
+    #6C2BD9 45%,
+    #0501ff 55%
+  );
+  left: -5%;
+  top: 35%;
+  animation: hover-spin 10s infinite linear;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+@keyframes hover-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hover-card:hover .animated-border {
+  visibility: visible;
+  opacity: 1;
 }
 
 .pulse-animation {
@@ -328,5 +359,51 @@ input[type="number"] {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* faq section */
+.faq-content {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 1.5rem;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-content.open {
+  max-height: 500px;
+  padding: 1.5rem;
+}
+
+.snake-button {
+  position: relative;
+  /* overflow: hidden; */
+  transition: all 0.3s;
+}
+
+.snake-button::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -6px;
+  right: -6px;
+  bottom: 6px;
+  background: linear-gradient(90deg, #6C2BD9 50%, #e54646 50%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.snake-button:hover::before {
+  opacity: 1;
+  animation: hover-spin 1.5s linear infinite;
+}
+
+@keyframes snake-border {
+  0% {
+      background-position: 0% 0%;
+  }
+  100% {
+      background-position: 400% 400%;
   }
 }

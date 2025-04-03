@@ -2,7 +2,7 @@
 window.addEventListener("load", function () {
   setTimeout(function () {
     document.getElementById("loader").classList.add("hidden");
-  }, 1000);
+  }, 500);
 });
 
 // Initialize AOS animations with improved settings
@@ -81,28 +81,36 @@ faqToggles.forEach((toggle) => {
     const content = this.nextElementSibling;
     const icon = this.querySelector("svg");
 
-    // Toggle current FAQ
-    content.classList.toggle("hidden");
+    // Close all other FAQ items
+    document.querySelectorAll(".faq-content.open").forEach((openContent) => {
+      if (openContent !== content) {
+        openContent.classList.remove("open");
+        openContent.previousElementSibling.querySelector(
+          "svg"
+        ).style.transform = "rotate(0deg)";
+      }
+    });
 
-    // Rotate icon
-    if (content.classList.contains("hidden")) {
-      icon.style.transform = "rotate(0deg)";
-    } else {
+    // Toggle the current FAQ item
+    content.classList.toggle("open");
+
+    // Rotate the icon based on the open state
+    if (content.classList.contains("open")) {
       icon.style.transform = "rotate(180deg)";
-    }
-
-    // Add animation to content
-    if (!content.classList.contains("hidden")) {
-      content.style.maxHeight = "0";
-      setTimeout(() => {
-        content.style.maxHeight = content.scrollHeight + "px";
-        content.style.transition = "max-height 0.3s ease-in-out";
-      }, 10);
+      
     } else {
-      content.style.maxHeight = null;
+      icon.style.transform = "rotate(0deg)";
     }
   });
 });
+
+// Reveal the first FAQ item by default
+if (faqToggles.length > 0) {
+  setTimeout(() => {
+    // Simulate a click on the first toggle
+    faqToggles[0].click();
+  }, 1000);
+}
 
 // form image preview
 document.getElementById("upload-image").addEventListener("change", (e) => {
@@ -141,10 +149,3 @@ const formInputs = document.querySelectorAll("input, textarea");
 //       }
 //     });
 //   });
-
-// Reveal first FAQ item by default
-if (faqToggles.length > 0) {
-  setTimeout(() => {
-    faqToggles[0].click();
-  }, 1000);
-}
